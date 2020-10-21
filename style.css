@@ -4,6 +4,7 @@ html,
 body {
     height: 100%;
     width: 100%;
+    font-family: 'Raleway' , sans-serif;
 }
 
 body {
@@ -11,13 +12,11 @@ body {
 }
 
 header {
-    /* background-image: url('images/carousel/picture5.jpg'); */
     height: 80%;
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
     color: #ffffff;
-    font-family: 'Raleway' , sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -27,15 +26,24 @@ header > span {
     font-size: 26px;
     display: inline-block;
     position: absolute;
-    top: 30px;
+    top: 10px;
     left: 150px;
+}
+
+@media screen and (max-width: 767px) {
+    header > span {
+        font-size: 22px;
+        top: 10px;
+        left: 5px;
+    }
 }
 
 header > nav {
     display: inline-block;
     position: absolute;
     right: 250px;
-    top: 10px;
+    top: 0;
+    width: fit-content;
 }
 
 nav > ul {
@@ -53,46 +61,78 @@ nav > ul > li > a {
     text-decoration: none;
 }
 
-header > h1,
-header > p {
-    text-align: center;
-    font-weight: 400;
+@media screen and (max-width: 767px) {
+
+    header > nav {
+        left: 65px;
+        top: 0px;
+    }
+
+    nav > ul > li {
+        margin-right: 10px;
+    }
+
+    nav > ul > li > a {
+        font-size: 14px;
+        color: #ffffff;
+        text-decoration: none;
+    }
+
 }
 
-header > h1 {
+@media screen and (max-width: 980px) {
+
+    header > nav {
+        right: 50px;
+        top: 0px;
+    }
+
+}
+
+.title-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.title-wrapper > .arrow {
+    font-size: 42px;
+}
+
+@media screen and (max-width: 767px) {
+
+    .title-wrapper > .arrow {
+        font-size: 22px;
+    }
+}
+
+.title-wrapper > .arrow:hover {
+    cursor: pointer;
+    background-color: rgba(241, 241, 241, 0.5);
+}
+
+.title-wrapper > h1 {
     font-weight: 200;
 }
 
-header > h1 > span {
+@media screen and (max-width: 767px) {
+
+    .title-wrapper > h1 {
+        font-size: 20px;
+    }
+
+}
+
+.title-wrapper > h1 > span {
     font-weight: 800;
 }
 
+header > p {
+    text-align: center;
+}
 
 header > .learn-more {
-    margin: 0 auto;
-    margin-bottom: 20px;
-}
-
-.left-arrow {
-    width: fit-content;
-    position: relative;
-    top: 70px;
-    left: 300px;
-    font-size: 42px;
-}
-
-.right-arrow {
-    width: fit-content;
-    position: absolute;
-    top: 250px;
-    left: 1200px;
-    font-size: 42px;
-}
-
-.left-arrow,
-.right-arrow :hover {
-
-    cursor: pointer;
+    margin: 30px auto;
 }
 
 .dots-wrapper {
@@ -101,7 +141,7 @@ header > .learn-more {
 }
 
 .dots-wrapper > div {
-
+    
     height: 8px;
     width: 8px;
     background-color: #999DA1;
@@ -124,14 +164,19 @@ header > .learn-more {
 }
 
 .about-section > h2 {
-    font-family: 'Raleway' , sans-serif;
     color: #8795A0;
     font-weight: 200;
     font-size: 42px;
 }
 
+@media screen and (max-width: 767px) {
+
+    .about-section > h2 {
+        font-size: 28px;
+    }
+}
+
 .about-section > p {
-    font-family: 'Raleway' , sans-serif;
     color: #999DA1;
     margin-bottom: 90px;
 }
@@ -142,20 +187,33 @@ header > .learn-more {
     justify-content: center;
 }
 
+@media screen and (max-width: 767px) {
+
+    .articles-wrapper {
+        flex-direction: column;
+    }
+}
+
 .articles-wrapper > article {
     text-align: center;
     flex-basis: 18%;
     margin-left: 45px;
 }
 
+@media screen and (max-width: 767px) {
+
+    .articles-wrapper > article {
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+}
+
 .articles-wrapper > article > h3 {
-    font-family: 'Raleway' , sans-serif;
     font-weight: 400;
     font-size: 24px;
 }
 
 .articles-wrapper > article > p {
-    font-family: 'Raleway' , sans-serif;
     color: #999DA1;
     font-size: 17px;
 }
@@ -174,7 +232,6 @@ header > .learn-more {
 }
 
 .learn-more {
-    font-family: 'Raleway' , sans-serif;
     font-size: 12px;
     font-weight: 800;
     text-decoration: none;
@@ -182,20 +239,32 @@ header > .learn-more {
     background-color: #17DAA2;
     border-radius: 16px;
     padding: 10px 42px;
-    width: fit-content;
 }
 
 
 .about-section > .learn-more {
-
     margin: 70px 0;
+}
 
+@media screen and (max-width: 767px) {
+
+    .about-section > .learn-more {
+        margin: 50px 0;
+    }
 }
 
 .product-section {
     display: flex;
     background-color: #F9F9F9;
     height: 420px;
+}
+
+@media screen and (max-width: 767px) {
+
+    .product-section {
+        flex-direction: column;
+        height: 570px
+    }
 }
 
 .product-section > article {
@@ -209,19 +278,46 @@ header > .learn-more {
 }
 
 .content  {
-    padding: 80px 140px 80px 70px;
+    padding: 60px 120px 60px 60px;
+}
+
+@media screen and (max-width: 767px) {
+
+    .content  {
+        padding: 20px 25px 20px 20px;
+    }
 }
 
 .content > h2 {
-    font-family: 'Raleway' , sans-serif;
     font-weight: 200;
     color: #8795A0;
     font-size: 44px;
     margin-bottom: 50px;
 }
 
+@media screen and (max-width: 767px) {
+
+    .content > h2 {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+}
+
 .content > p {
-    font-family: 'Raleway' , sans-serif;
     color: #999DA1;
     margin-bottom: 50px;
+}
+
+@media screen and (max-width: 767px) {
+
+    .content > p {
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    .second-section > article:nth-child(1) {
+        order: 1;
+    }
 }
